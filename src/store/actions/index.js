@@ -24,7 +24,7 @@ export default {
         ? filteredData
         : commit('SET_DATA_TO_CLIENT_DATA', filteredData.slice(0, itemNumberPerPage))
     } catch (err) {
-      console.warn('Error while getting data client', err)
+      window.console.warn('Error while getting data client', err)
     }
   },
   async loadMoreClientData ({ commit, state, dispatch }) {
@@ -45,7 +45,7 @@ export default {
       commit('PUSH_DATA_TO_CLIENT_DATA', dataToPush)
       commit('UPDATE_CURRENT_PAGE_CLIENT_DATA', currentPage + 1)
     } catch (err) {
-      console.warn('Error while loading more data client', err)
+      window.console.warn('Error while loading more data client', err)
     }
   },
   setCurrentClientData ({ commit }, payload) {
@@ -70,7 +70,7 @@ export default {
       dispatch('resetCurrentClientData')
       await dispatch('getDataClient')
     } catch (err) {
-      console.warn('Error while setting new status filter', err)
+      window.console.warn('Error while setting new status filter', err)
     }
   },
   async sortData ({ commit, dispatch }, sortParams) {
@@ -81,7 +81,7 @@ export default {
       await dispatch('getDataClient')
       dispatch('wait/end', 'get client data', { root: true })
     } catch (err) {
-      console.warn('Error while sorting data', err)
+      window.console.warn('Error while sorting data', err)
     }
   },
   async searchingInData ({ commit, dispatch, state }, { query, noSetData }) {
@@ -117,7 +117,7 @@ export default {
         ? data
         : commit('SET_DATA_TO_CLIENT_DATA', data.slice(0, state.itemNumberPerPage))
     } catch (err) {
-      console.log('Error while searching', err)
+      window.console.log('Error while searching', err)
     }
   }
 }

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest docs --mode production",
     "lint": "npm run lint:style && vue-cli-service lint",
     "lint:style": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
     "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix"
