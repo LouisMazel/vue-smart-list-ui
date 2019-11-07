@@ -97,7 +97,7 @@
     }
 
     &.active {
-      background-color: $brand-color;
+      background-color: var(--brand-color);
 
       &:focus {
         box-shadow: 0 0 0 0.2rem rgba($brand-color, 0.7);

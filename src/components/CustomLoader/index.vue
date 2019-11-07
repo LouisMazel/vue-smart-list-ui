@@ -49,7 +49,7 @@
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background: $brand-color;
+        background: var(--brand-color);
         margin: -2.5px 0 0 -2.5px;
       }
 
