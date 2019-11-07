@@ -1,0 +1,145 @@
+@import 'style-helpers';
+@import 'vue-input-ui/dist/vue-input-ui';
+@import './_variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons');
+
+html,
+body,
+#app {
+  font: $base-font-weight $base-font-size $base-font-family;
+  line-height: $base-line-height;
+  font-kerning: normal;
+  max-height: 100vh;
+  min-height: 100vh;
+  color: $text-color;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font: $base-font-weight $base-font-size $base-font-family;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: $brand-color;
+}
+
+.bg-light {
+  background-color: $background-color-light;
+}
+
+.bg-grey {
+  background-color: #F2F2F2;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+
+.label {
+  &-primary {
+    background-color: $brand-color;
+  }
+
+  &-success {
+    background-color: #5CB85C;
+  }
+
+  &-danger {
+    background-color: orangered;
+  }
+
+  &-warning {
+    background-color: #F0AD4E;
+  }
+
+  &-info {
+    background-color: #5BC0DE;
+  }
+
+  &-default {
+    background-color: #CCC;
+  }
+}
+
+$dot-size: 6px;
+
+.dot {
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: $dot-size;
+
+  &-primary {
+    background-color: $brand-color;
+  }
+
+  &-success {
+    background-color: #5CB85C;
+  }
+
+  &-danger {
+    background-color: orangered;
+  }
+
+  &-warning {
+    background-color: #F0AD4E;
+  }
+
+  &-info {
+    background-color: #5BC0DE;
+  }
+
+  &-default {
+    background-color: #CCC;
+  }
+}
+
+.data-container {
+  background-color: #F2F2F2;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 1rem;
+
+  &__label {
+    color: #757575;
+  }
+}
