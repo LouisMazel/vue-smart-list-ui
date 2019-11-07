@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="client-detail-header p-2 flex justify-content-between align-center"
+    class="client-detail-header p-2 flex justify-content-between align-center bg-color"
   >
     <SectionTitle text="Tracking client" />
     <button
@@ -25,11 +25,11 @@
 
 <style lang="scss" scoped>
   .client-detail-header {
-    background-color: #F2F2F2;
     z-index: 9;
 
     &__close-btn {
-      color: #333;
+      background-color: var(--second-color);
+      color: var(--text-color);
       border: none;
       cursor: pointer;
       height: 28px;
@@ -37,12 +37,6 @@
       border-radius: 50%;
       outline: none;
       font-size: 12px;
-
-      &:hover,
-      &:focus {
-        background-color: #F2F2F2;
-        box-shadow: 0 0 0 0.2rem rgba(#FFF, 0.7);
-      }
     }
   }
 </style>

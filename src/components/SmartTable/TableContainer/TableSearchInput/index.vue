@@ -2,17 +2,20 @@
   <VueInputUi
     :value="queryValue"
     label="Search"
-    color="#44bbbc"
+    color="dodgerblue"
     clearable
     class="table-search-input"
     :loader="hasLoader"
+    :dark="hasDarkTheme"
     @input="debounceSearch"
   />
 </template>
 
 <script>
   import VueInputUi from 'vue-input-ui'
-  import { mapActions } from 'vuex'
+  import 'vue-input-ui/dist/vue-input-ui.css'
+
+  import { mapActions, mapGetters } from 'vuex'
 
   export default {
     name: 'TableSearchInput',
@@ -28,6 +31,7 @@
       }
     },
     computed: {
+      ...mapGetters(['hasDarkTheme']),
       queryValue: {
         get () {
           return this.value

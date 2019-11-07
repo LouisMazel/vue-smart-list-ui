@@ -60,6 +60,9 @@ export default {
   setSearchQuery ({ commit }, query) {
     commit('SET_SEARCH_QUERY', query)
   },
+  setDarkTheme ({ commit }, value) {
+    commit('SET_DARK_THEME', value)
+  },
   async setCurrentFilterState ({ commit, dispatch }, status) {
     try {
       commit('SET_DATA_TO_CLIENT_DATA', [])

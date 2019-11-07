@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header bg-color">
     <div class="px-4 p-2 flex align-center justify-content-between">
       <a
         href="/"
@@ -19,33 +19,56 @@
           </p>
         </div>
       </a>
-      <a
-        href="https://www.loicmazuel.com/"
-        target="_blank"
-        class="flex"
-      >
-        <div class="header__title flex flex-direction-column flex-end">
-          <h3>
-            Made by Loïc Mazuel
-          </h3>
-          <p class="fs-14 text-muted">
-            With VueJS
+      <div class="flex">
+        <div class="flex align-center mr-4">
+          <p class="fs-14 mr-2">
+            Dark mode
           </p>
+          <CheckboxUI
+            :value="hasDarkTheme"
+            @input="setDarkTheme"
+          />
         </div>
-      </a>
+        <a
+          href="https://www.loicmazuel.com/"
+          target="_blank"
+          class="flex"
+        >
+          <div class="header__title flex flex-direction-column flex-end">
+            <h3>
+              Made by Loïc Mazuel
+            </h3>
+            <p class="fs-14 text-muted">
+              With VueJS
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
+  import CheckboxUI from '@/components/CheckboxUI'
+  import { mapGetters, mapActions } from 'vuex'
+
   export default {
-    name: 'Header'
+    name: 'Header',
+    components: {
+      CheckboxUI
+    },
+    computed: {
+      ...mapGetters(['hasDarkTheme'])
+    },
+    methods: {
+      ...mapActions(['setDarkTheme'])
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   .header {
-    border-bottom: 1px solid #F2F2F2;
+    border-bottom: 1px solid var(--second-color);
 
     a.logo {
       text-decoration: none;

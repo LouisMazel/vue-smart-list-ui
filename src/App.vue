@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    :style="sizeVar"
+    :style="colorVars"
     class="flex flex-direction-column mh-100"
   >
     <Header class="flex-fixed" />
@@ -10,7 +10,7 @@
     </div>
     <div
       v-if="$wait.is('app loading')"
-      class="layout-loader bg-white pos-a flex flex-direction-column align-center justify-content-center"
+      class="layout-loader flex flex-direction-column align-center justify-content-center bg-color"
     >
       <CustomLoader
         class="mb-4"
@@ -25,6 +25,9 @@ import CrmInterface from '@/views/CrmInterface'
 
 import Header from '@/components/Header'
 import CustomLoader from '@/components/CustomLoader'
+import { mapGetters } from 'vuex'
+
+import { darkTheme, lightTheme } from '@/themes'
 
 export default {
   name: 'App',
@@ -34,14 +37,9 @@ export default {
     CustomLoader
   },
   computed: {
-    sizeVar () {
-      return {
-        '--brand-color': 'dodgerblue',
-        '--bg-color': '#21222E',
-        '--text-color': 'white',
-        '--border-color': '#303144',
-        '--second-color': '#303144'
-      }
+    ...mapGetters(['hasDarkTheme']),
+    colorVars () {
+      return this.hasDarkTheme ? darkTheme : lightTheme
     }
   },
   mounted () {
@@ -65,6 +63,7 @@ export default {
     }
 
     .layout-loader {
+      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;

@@ -4,14 +4,17 @@
     class="table-sort-selector"
     label="Sorted by"
     :options="sortOptions"
-    color="#44BBBC"
+    color="dodgerblue"
     :item-height="40"
+    :dark="hasDarkTheme"
   />
 </template>
 
 <script>
   import VueSelectInputUi from 'vue-select-input-ui'
   import 'vue-select-input-ui/dist/vue-select-input-ui.css'
+
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'TableSortSelector',
@@ -23,6 +26,7 @@
       value: { type: String, default: null }
     },
     computed: {
+      ...mapGetters(['hasDarkTheme']),
       sortOptionSelected: {
         get () {
           return this.value

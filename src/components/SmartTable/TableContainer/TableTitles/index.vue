@@ -1,11 +1,11 @@
 <template>
   <div 
-    class="table-titles flex flex-fixed"
+    class="table-titles flex flex-fixed bg-color"
   >
     <div
       v-for="({ title, width, path }, i) in titles"
       :key="i"
-      class="table-titles__title p-2 fw-400 fs-14 dots-text"
+      class="table-titles__title p-2 fw-400 fs-14 dots-text text-muted"
       :class="{ 'flex-1': !width }"
       :style="{ 'width': width ? width : null }"
       draggable
@@ -59,22 +59,20 @@
 
 <style lang="scss" scoped>
   .table-titles {
-    background-color: #F2F2F2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
 
     &__title {
       cursor: move;
       border: 2px solid transparent;
-      color: #757575;
 
       &:hover {
-        background-color: darken(#F2F2F2, 3%);
+        background-color: var(--hover-color);
       }
 
       &.right-border:not(.active) {
-        background-color: lighten(#F2F2F2, 3%);
-        border: 2px dotted #333;
+        background-color: var(--second-color);
+        border: 2px dotted var(--text-muted-color);
       }
     }
   }

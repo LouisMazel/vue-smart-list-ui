@@ -1,5 +1,4 @@
 @import 'style-helpers';
-@import 'vue-input-ui/dist/vue-input-ui';
 @import './_variables';
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons');
 
@@ -11,46 +10,7 @@ body,
   font-kerning: normal;
   max-height: 100vh;
   min-height: 100vh;
-  color: $text-color;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-hr,
-dl,
-dd,
-ol,
-ul,
-figure {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-}
-
-a {
-  color: $brand-color;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-button {
-  font: $base-font-weight $base-font-size $base-font-family;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  color: var(--text-color);
 }
 
 h1,
@@ -63,83 +23,49 @@ h6 {
   color: $brand-color;
 }
 
-.bg-light {
-  background-color: $background-color-light;
-}
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 
-.bg-grey {
-  background-color: #F2F2F2;
-}
-
-.br-8 {
-  border-radius: 8px;
-}
-
-.label {
-  &-primary {
-    background-color: $brand-color;
+  &:hover {
+    box-shadow: 0 0 0 0.2rem var(--light-color);
+    background-color: var(--hover-color);
   }
 
-  &-success {
-    background-color: #5CB85C;
-  }
-
-  &-danger {
-    background-color: orangered;
-  }
-
-  &-warning {
-    background-color: #F0AD4E;
-  }
-
-  &-info {
-    background-color: #5BC0DE;
-  }
-
-  &-default {
-    background-color: #CCC;
+  &:focus {
+    box-shadow: 0 0 0 0.2rem var(--light-color);
+    background-color: var(--hover-color);
   }
 }
 
-$dot-size: 6px;
+.text-muted {
+  color: var(--text-muted-color);
+}
 
-.dot {
-  width: $dot-size;
-  height: $dot-size;
-  border-radius: $dot-size;
+.bg-color {
+  background-color: var(--primary-color);
+}
 
-  &-primary {
-    background-color: $brand-color;
-  }
-
-  &-success {
-    background-color: #5CB85C;
-  }
-
-  &-danger {
-    background-color: orangered;
-  }
-
-  &-warning {
-    background-color: #F0AD4E;
-  }
-
-  &-info {
-    background-color: #5BC0DE;
-  }
-
-  &-default {
-    background-color: #CCC;
-  }
+.bg-color-light {
+  background-color: var(--second-color);
 }
 
 .data-container {
-  background-color: #F2F2F2;
+  background-color: var(--primary-color);
   font-size: 14px;
   border-radius: 8px;
   padding: 1rem;
 
   &__label {
-    color: #757575;
+    color: var(--text-muted-color);
+  }
+}
+
+.badge {
+  background-color: var(--second-color);
+
+  &-white {
+    background-color: var(--dark-brand-color);
+    color: white;
   }
 }

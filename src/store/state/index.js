@@ -4,7 +4,7 @@ const initialDataShown = [
   // { title: 'PJ', path: 'attachments', width: '100px' },
   { type: 'status', title: 'Status', path: 'status', width: '80px' },
   { type: 'text', title: 'From', path: { 'customer': ['last_name', 'first_name'] }, width: '130px'},
-  { type: 'social', title: 'From', path: 'contact_channel', width: '80px' },
+  { type: 'social', title: 'Platform', path: 'contact_channel', width: '80px' },
   { type: 'date', title: 'Creation date', path: 'interaction_creation_date', width: '140px' },
   { type: 'date', title: 'Due date', path: 'due_date', width: '140px' },
   { type: 'text', title: 'Assigned to', path: 'assignedTO', width: '130px' },
@@ -39,5 +39,6 @@ export default {
   dataShown: JSON.parse(localStorage.getItem('dataShown')) || initialDataShown,
   sortOptions: sortOptions,
   searchQuery: null,
-  availableStatus: ['all', 'waiting', 'reserved', 'inProgress', 'toTreat', 'finished']
+  availableStatus: ['all', 'waiting', 'reserved', 'inProgress', 'toTreat', 'finished'],
+  darkThemeEnable: false
 }

@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="client-detail-footer p-2 flex justify-content-between align-center"
+    class="client-detail-footer p-2 flex justify-content-between align-center bg-color"
   >
     <a
       :href="`./${attachments}`"
@@ -27,7 +27,6 @@
 
 <style lang="scss" scoped>
   .client-detail-footer {
-    background-color: #F2F2F2;
     z-index: 9;
 
     a {

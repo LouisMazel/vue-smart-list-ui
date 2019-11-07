@@ -18,24 +18,3 @@ $dark-color:       #24292E !default;
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 30%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
-
-$table-text-align: left !default;
-
-// Breakpoints
-$breakpoint-mobile-s: 320px;
-$breakpoint-mobile-m: 375px;
-$breakpoint-mobile-l: 425px;
-$breakpoint-tablet: 767px;
-$breakpoint-laptop-s: 1024px;
-$breakpoint-laptop-l: 1440px;
-$breakpoint-4k: 2560px;
-
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}

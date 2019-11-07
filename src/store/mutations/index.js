@@ -28,5 +28,8 @@ export default {
   },
   SET_MAX_PAGE (state, number) {
     state.maxPage = number
+  },
+  SET_DARK_THEME (state, value) {
+    state.darkThemeEnable = value
   }
 }

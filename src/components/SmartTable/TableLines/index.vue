@@ -63,22 +63,14 @@
       data: { type: Object, default: Object },
       pathList: { type: Array, default: Array },
       active: { type: Boolean, default: false }
-    },
-    methods: {
-      getData (values) {
-        console.log('values', values)
-        return values
-      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .table-line {
-    background: #FFF;
     border-radius: 8px;
     margin: 10px 0;
-    box-shadow: 0 6px 10px 0 rgba(12, 8, 60, 0.1);
     cursor: pointer;
     user-select: none;
     border: none;
@@ -86,13 +78,15 @@
     width: 100%;
     min-height: 42px;
     padding: 0;
+    box-shadow: 0 6px 10px 0 rgba(12, 8, 60, 0.1);
+
 
     &:last-child {
       border-bottom: none;
     }
 
     &__cell {
-      border-right: 1px solid #F2F2F2;
+      border-right: 1px solid var(--second-color);
       font-size: 14px;
       height: 100%;
       min-width: 0;
@@ -100,16 +94,6 @@
       &:last-child {
         border-right: none;
       }
-    }
-
-    &:hover {
-      box-shadow: 0 0 0 0.2rem #EAEAEA;
-      background-color: #F2F2F2;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 0.2rem rgba($brand-color, 0.7);
-      background-color: #F2F2F2;
     }
 
     &.active {

@@ -31,9 +31,5 @@
     background-color: rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-
-    h3 {
-      text-shadow: #FFF 1px 0 10px;
-    }
   }
 </style>

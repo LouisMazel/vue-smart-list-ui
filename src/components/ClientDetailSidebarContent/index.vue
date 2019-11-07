@@ -1,5 +1,5 @@
 <template>
-  <div class="client-detail-sidebar-content flex flex-direction-column flex-1">
+  <div class="client-detail-sidebar-content flex flex-direction-column flex-1 bg-color-light">
     <ClientDetailHeader
       @close="$emit('close-sidebar')"
     />
@@ -14,7 +14,7 @@
       class="client-detail-sidebar-content__content p-2"
       @scroll="viewScrolled"
     > 
-      <h4 class="fs-16 my-3">
+      <h4 class="fs-16 mb-3">
         Client informations
       </h4>
       <ClientInformations :data="getCurrentClientData.customer" />
@@ -31,7 +31,7 @@
 
       <ClientId
         :client-id="getCurrentClientData.id"
-        class="my-3"
+        class="mt-3"
       />
     </div>
     <ClientDetailFooter

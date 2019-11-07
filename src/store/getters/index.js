@@ -26,5 +26,8 @@ export default {
   isLastPage (state) {
     const { currentPage, maxPage } = state
     return currentPage > maxPage
+  },
+  hasDarkTheme (state) {
+    return state.darkThemeEnable
   }
 }

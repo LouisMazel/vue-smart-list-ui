@@ -1,6 +1,6 @@
 <template>
-  <div class="tracking-table flex flex-direction-column mw-100">
-    <div class="tracking-table__header flex justify-content-between flex-fixed py-2 px-4 align-center">
+  <div class="tracking-table flex flex-direction-column mw-100 bg-color-light">
+    <div class="tracking-table__header flex justify-content-between flex-fixed py-2 px-4 align-center bg-color">
       <div class="tracking-table__title pl-2">
         <h2>Tracking Client</h2>
       </div>
@@ -104,9 +104,6 @@
 
 <style lang="scss" scoped>
   .tracking-table {
-    background-color: #FFF;
-    border-radius: 8px;
-    // box-shadow: 0 6px 10px 0 rgba(12, 8, 60, 0.1);
 
     &__scroll-content {
       position: relative;

@@ -62,27 +62,15 @@
 
 <style lang="scss" scoped>
   .status-fitler-btn {
-    color: #000;
     font-size: 14px;
     border-radius: 8px;
     border: none;
-    background-color: #FFF;
     height: 38px;
     flex: 0 0 38px;
     padding: 0 20px;
     outline: none;
     margin: 0;
     cursor: pointer;
-
-    &:hover {
-      box-shadow: 0 0 0 0.2rem rgba(#FFF, 0.7);
-      background-color: #F2F2F2;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 0.2rem rgba(#FFF, 0.7);
-      background-color: #F2F2F2;
-    }
 
     &.active {
       background-color: $brand-color;
@@ -91,10 +79,6 @@
 
       .dot {
         box-shadow: 0 0 0 1px #FFF;
-      }
-
-      .badge {
-        color: #888;
       }
     }
   }
