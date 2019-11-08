@@ -16,7 +16,7 @@
     "vue-infinite-scroll": "^2.0.2",
     "vue-input-ui": "^0.2.15",
     "vue-moment": "^4.0.0",
-    "vue-select-input-ui": "^0.0.6",
+    "vue-select-input-ui": "^1.0.1",
     "vue-sidebar-ui": "^0.0.3",
     "vue-wait": "^1.4.8",
     "vuex": "^3.1.1"

@@ -6,7 +6,9 @@
     :options="sortOptions"
     color="dodgerblue"
     :item-height="40"
+    :border-radius="8"
     :dark="hasDarkTheme"
+    dark-color="#303144"
   />
 </template>
 

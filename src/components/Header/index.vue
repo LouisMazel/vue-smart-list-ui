@@ -2,7 +2,7 @@
   <header class="header bg-color">
     <div class="px-4 p-2 flex align-center justify-content-between">
       <a
-        href="/"
+        href="#"
         class="flex logo"
       >
         <img

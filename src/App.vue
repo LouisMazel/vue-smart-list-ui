@@ -22,7 +22,6 @@
 
 <script>
 import CrmInterface from '@/views/CrmInterface'
-
 import Header from '@/components/Header'
 import CustomLoader from '@/components/CustomLoader'
 import { mapGetters } from 'vuex'

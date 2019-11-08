@@ -12,6 +12,7 @@ const initialDataShown = [
 ]
 
 const sortOptions = [
+  { label: 'None' },
   { label: 'ID', value: 'id' },
   { label: 'Client name ↓ (A-Z)', value: 'from' },
   { label: 'Client name ↑ (Z-A)', value: '-from' },
@@ -40,5 +41,5 @@ export default {
   sortOptions: sortOptions,
   searchQuery: null,
   availableStatus: ['all', 'waiting', 'reserved', 'inProgress', 'toTreat', 'finished'],
-  darkThemeEnable: false
+  darkThemeEnable: true
 }
