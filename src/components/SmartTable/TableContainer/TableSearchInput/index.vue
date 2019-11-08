@@ -7,6 +7,8 @@
     class="table-search-input"
     :loader="hasLoader"
     :dark="hasDarkTheme"
+    :border-radius="8"
+    dark-color="#303144"
     @input="debounceSearch"
   />
 </template>

@@ -5,10 +5,10 @@
     label="Sorted by"
     :options="sortOptions"
     color="dodgerblue"
-    :item-height="40"
-    :border-radius="8"
     :dark="hasDarkTheme"
+    :border-radius="8"
     dark-color="#303144"
+    :item-height="40"
   />
 </template>
 

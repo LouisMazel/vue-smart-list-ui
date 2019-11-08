@@ -14,7 +14,7 @@
     "style-helpers": "^0.2.8",
     "vue": "^2.6.10",
     "vue-infinite-scroll": "^2.0.2",
-    "vue-input-ui": "^0.2.15",
+    "vue-input-ui": "^1.0.1",
     "vue-moment": "^4.0.0",
     "vue-select-input-ui": "^1.0.1",
     "vue-sidebar-ui": "^0.0.3",
