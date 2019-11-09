@@ -10,6 +10,8 @@
     "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "css-vars-ponyfill": "^2.1.2",
     "moment": "^2.24.0",
     "style-helpers": "^0.2.8",
     "vue": "^2.6.10",

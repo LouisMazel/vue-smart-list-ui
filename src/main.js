@@ -7,6 +7,8 @@ import VueWait from 'vue-wait'
 import './assets/scss/main.scss'
 import './utils/ArrayPrototype'
 
+import '@babel/polyfill'
+
 import store from './store'
 
 Vue.config.productionTip = false

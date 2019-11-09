@@ -1,7 +1,6 @@
 <template>
   <div
     id="app"
-    :style="colorVars"
     class="flex flex-direction-column mh-100"
   >
     <Header class="flex-fixed" />
@@ -26,6 +25,8 @@ import Header from '@/components/Header'
 import CustomLoader from '@/components/CustomLoader'
 import { mapGetters } from 'vuex'
 
+import cssVars from 'css-vars-ponyfill'
+
 import { darkTheme, lightTheme } from '@/themes'
 
 export default {
@@ -37,16 +38,31 @@ export default {
   },
   computed: {
     ...mapGetters(['hasDarkTheme']),
-    colorVars () {
+    cssTheme () {
       return this.hasDarkTheme ? darkTheme : lightTheme
+    }
+  },
+  watch: {
+    hasDarkTheme () {
+      cssVars({
+        variables: this.hasDarkTheme ? darkTheme : lightTheme
+      })
     }
   },
   mounted () {
     // loading simulation page
+    this.setCssVars()
     this.$wait.start('app loading')
     setTimeout(() => {
       this.$wait.end('app loading')
     }, 1000)
+  },
+  methods: {
+    setCssVars () {
+      cssVars({
+        variables: this.hasDarkTheme ? darkTheme : lightTheme
+      })
+    }
   }
 }
 </script>
