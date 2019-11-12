@@ -4,7 +4,7 @@
     class="flex flex-direction-column mh-100"
   >
     <Header class="flex-fixed" />
-    <div class="content-container flex-1 flex">
+    <div class="content-container flex">
       <CrmInterface class="flex-1" />
     </div>
     <div
