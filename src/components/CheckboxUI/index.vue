@@ -5,7 +5,7 @@
       type="checkbox"
       name="open"
       :checked="value"
-      style="display:none"
+      style="display: none;"
       :class="{ 'checked': value }"
       :disabled="disabled"
       class="checkbox-input"
@@ -32,69 +32,75 @@
 </script>
 
 <style lang="scss" scoped>
-  $primary: dodgerblue;
-  $primary-light: #87bef3;
-  $gray: #9A9999;
+$primary: dodgerblue;
+$primary-light: #87BEF3;
+$gray: #9A9999;
 
-  .toggle {
+.toggle {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+
+  &::before {
+    content: '';
     position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
     display: block;
-    width: 40px;
+    background: $gray;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  span {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 20px;
     height: 20px;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transform: translate3d(0,0,0);
-    &:before {
-      content: "";
-      position: relative;
-      top: 3px;
-      left: 3px;
-      width: 34px;
-      height: 14px;
-      display: block;
-      background: $gray;
-      border-radius: 8px;
-      transition: all .2s ease;
-    }
-    span {
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba($gray, 0.5);
+    transition: all 0.2s ease;
+
+    &::before {
+      content: '';
       position: absolute;
-      top: -1px;
-      left: 0;
-      width: 20px;
-      height: 20px;
       display: block;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba($gray,.5);
-      transition: all .2s ease;
-      &:before {
-        content: "";
-        position: absolute;
-        display: block;
-        margin: -18px;
-        width: 56px;
-        height: 56px;
-        background: rgba($primary,.5);
-        border-radius: 50%;
-        transform: scale(0);
-        opacity: 1;
-        pointer-events: none;
-      }
+      margin: -18px;
+      width: 56px;
+      height: 56px;
+      background: rgba($primary, 0.5);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
     }
   }
+}
+
 .checkbox-input.checked + .toggle {
-  &:before {
+  &::before {
     background: $primary-light;
   }
+
   span {
     background: $primary;
     transform: translateX(20px);
-    transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
-    box-shadow: 0 3px 8px rgba($primary,.2);
-    &:before {
+    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+    box-shadow: 0 3px 8px rgba($primary, 0.2);
+
+    &::before {
       transform: scale(1);
       opacity: 0;
-      transition: all .4s ease;
+      transition: all 0.4s ease;
     }
   }
 }

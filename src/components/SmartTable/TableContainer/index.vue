@@ -104,7 +104,6 @@
 
 <style lang="scss" scoped>
   .tracking-table {
-
     &__scroll-content {
       position: relative;
       min-height: 0;

@@ -80,7 +80,6 @@
     padding: 0;
     box-shadow: 0 6px 10px 0 rgba(12, 8, 60, 0.1);
 
-
     &:last-child {
       border-bottom: none;
     }

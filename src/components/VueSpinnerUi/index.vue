@@ -7,7 +7,7 @@
     x="0px"
     y="0px"
     viewBox="0 0 50 50"
-    style="enable-background:new 0 0 50 50;"
+    style="enable-background: new 0 0 50 50;"
     xml:space="preserve"
     class="mz-loader-ui loader-anim"
   >
