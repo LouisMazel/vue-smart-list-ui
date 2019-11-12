@@ -104,7 +104,6 @@
 <style lang="scss" scoped>
   .client-detail-sidebar-content {
     min-height: 0;
-    overflow: hidden;
 
     .has-shadow-top {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

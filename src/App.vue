@@ -74,7 +74,6 @@ export default {
 
     .content-container {
       min-height: 0;
-      overflow: hidden;
     }
 
     .layout-loader {

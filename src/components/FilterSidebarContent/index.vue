@@ -30,7 +30,6 @@
 
 <style lang="scss" scoped>
   .left-sidebar-content {
-    overflow-x: hidden;
     overflow-y: auto;
 
     button {
