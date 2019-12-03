@@ -39,7 +39,7 @@ export default {
   currentSort: localStorage.getItem('currentSort') || null,
   dataShown: JSON.parse(localStorage.getItem('dataShown')) || initialDataShown,
   sortOptions: sortOptions,
-  searchQuery: null,
+  searchQuery: '',
   availableStatus: ['all', 'waiting', 'reserved', 'inProgress', 'toTreat', 'finished'],
   darkThemeEnable: true
 }

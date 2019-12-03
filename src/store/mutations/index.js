@@ -24,7 +24,7 @@ export default {
     state.currentSort = type || null
   },
   SET_SEARCH_QUERY (state, query) {
-    state.searchQuery = query || null
+    state.searchQuery = query || ''
   },
   SET_MAX_PAGE (state, number) {
     state.maxPage = number

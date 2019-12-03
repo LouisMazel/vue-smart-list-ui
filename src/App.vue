@@ -4,9 +4,13 @@
     class="flex direction-column mh-100"
   >
     <Header class="flex-fixed" />
-    <div class="content-container flex">
+    <MazFlex
+      class="content-container"
+      flex
+      flex1
+    >
       <CrmInterface />
-    </div>
+    </MazFlex>
     <div
       v-if="$wait.is('app loading')"
       class="layout-loader flex direction-column align-center justify-center bg-color"
