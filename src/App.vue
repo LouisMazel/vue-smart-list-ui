@@ -15,7 +15,7 @@
       v-if="$wait.is('app loading')"
       class="layout-loader flex direction-column align-center justify-center bg-color"
     >
-      <CustomLoader
+      <MazLoader
         class="mb-4"
       />
       <h3>Loading simulation</h3>
@@ -26,7 +26,6 @@
 <script>
 import CrmInterface from '@/views/CrmInterface'
 import Header from '@/components/Header'
-import CustomLoader from '@/components/CustomLoader'
 import { mapGetters } from 'vuex'
 
 import cssVars from 'css-vars-ponyfill'
@@ -37,8 +36,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    CrmInterface,
-    CustomLoader
+    CrmInterface
   },
   computed: {
     ...mapGetters(['hasDarkTheme']),

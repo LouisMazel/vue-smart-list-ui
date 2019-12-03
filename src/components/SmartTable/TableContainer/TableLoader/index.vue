@@ -1,7 +1,7 @@
 <template>
   <div class="table-loader p-2 flex justify-center align-end">
     <div class="flex direction-column align-center justify-center">
-      <CustomLoader
+      <MazSpinner
         class="mb-2"
         :size="50"
       />
@@ -11,13 +11,8 @@
 </template>
 
 <script>
-  import CustomLoader from '@/components/CustomLoader'
-
   export default {
-    name: 'TableLoader',
-    components: {
-      CustomLoader
-    }
+    name: 'TableLoader'
   }
 </script>
 
