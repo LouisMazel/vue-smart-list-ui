@@ -1,5 +1,5 @@
 <template>
-  <div class="client-comment data-container flex flex-direction-column">
+  <div class="client-comment data-container flex direction-column">
     <p class="data-container__value">
       {{ comment }}
     </p>

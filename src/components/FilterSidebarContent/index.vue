@@ -1,5 +1,5 @@
 <template>
-  <div class="left-sidebar-content p-2 flex flex-direction-column bg-color-light h-100">
+  <div class="left-sidebar-content p-2 flex direction-column bg-color-light h-100">
     <SectionTitle
       text="Filtered by"
       class="mb-2"

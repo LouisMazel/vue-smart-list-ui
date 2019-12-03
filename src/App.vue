@@ -1,15 +1,15 @@
 <template>
   <div
     id="app"
-    class="flex flex-direction-column mh-100"
+    class="flex direction-column mh-100"
   >
     <Header class="flex-fixed" />
     <div class="content-container flex">
-      <CrmInterface class="flex-1" />
+      <CrmInterface />
     </div>
     <div
       v-if="$wait.is('app loading')"
-      class="layout-loader flex flex-direction-column align-center justify-content-center bg-color"
+      class="layout-loader flex direction-column align-center justify-center bg-color"
     >
       <CustomLoader
         class="mb-4"

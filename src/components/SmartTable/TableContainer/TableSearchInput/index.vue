@@ -1,5 +1,5 @@
 <template>
-  <VueInputUi
+  <MazInput
     :value="queryValue"
     label="Search"
     color="dodgerblue"
@@ -14,18 +14,12 @@
 </template>
 
 <script>
-  import VueInputUi from 'vue-input-ui'
-  import 'vue-input-ui/dist/vue-input-ui.css'
-
   import { mapActions, mapGetters } from 'vuex'
 
   export default {
     name: 'TableSearchInput',
-    components: {
-      VueInputUi
-    },
     props: {
-      value: { type: String, default: null }
+      value: { type: String, default: String }
     },
     data () {
       return {

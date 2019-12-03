@@ -1,6 +1,6 @@
 <template>
-  <div 
-    class="client-detail-footer p-2 flex justify-content-between align-center bg-color"
+  <div
+    class="client-detail-footer p-2 flex space-between align-center bg-color"
   >
     <a
       :href="`./${attachments}`"
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  
+
   export default {
     name: 'ClientDetailFooter',
     props: {

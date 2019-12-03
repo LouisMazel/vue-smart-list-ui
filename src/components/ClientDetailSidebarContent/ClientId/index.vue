@@ -1,6 +1,6 @@
 <template>
-  <div 
-    class="data-container flex justify-content-between p-3 br-8"
+  <div
+    class="data-container flex space-between p-3 br-8"
   >
     <p class="data-container__label">
       Client ID

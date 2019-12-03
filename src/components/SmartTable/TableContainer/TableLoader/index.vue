@@ -1,6 +1,6 @@
 <template>
-  <div class="table-loader p-2 flex justify-content-center flex-end">
-    <div class="flex flex-direction-column align-center justify-content-center">
+  <div class="table-loader p-2 flex justify-center align-end">
+    <div class="flex direction-column align-center justify-center">
       <CustomLoader
         class="mb-2"
         :size="50"

@@ -1,6 +1,6 @@
 <template>
-  <div 
-    class="client-detail-header p-2 flex justify-content-between align-center bg-color"
+  <div
+    class="client-detail-header p-2 flex space-between align-center bg-color"
   >
     <SectionTitle text="Tracking client" />
     <button
@@ -14,7 +14,7 @@
 
 <script>
   import SectionTitle from '@/components/SectionTitle'
-  
+
   export default {
     name: 'ClientDetailHeader',
     components: {

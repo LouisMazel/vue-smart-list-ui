@@ -1,5 +1,5 @@
 <template>
-  <div class="table-lines-comment flex justify-content-between align-center">
+  <div class="table-lines-comment flex space-between align-center">
     <div
       class="fs-12 text-left flex-1"
       :class="{ 'dots-text': cropText }"
@@ -8,7 +8,7 @@
     </div>
     <button
       tabindex="-1"
-      class="table-lines-comment__btn-visibility flex align-center justify-content-center"
+      class="table-lines-comment__btn-visibility flex align-center justify-center"
       @click.stop="cropText = !cropText"
     >
       <i class="material-icons fs-18">
@@ -27,7 +27,7 @@
     data () {
       return {
         cropText: true
-      } 
+      }
     }
   }
 </script>

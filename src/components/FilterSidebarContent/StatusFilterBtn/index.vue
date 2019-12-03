@@ -1,6 +1,6 @@
 <template>
   <button
-    class="status-fitler-btn flex justify-content-between align-center"
+    class="status-fitler-btn flex space-between align-center"
     :class="[{'active': isActive}]"
     @click="updateStatus(status)"
   >

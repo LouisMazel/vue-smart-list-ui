@@ -4,10 +4,15 @@ import App from './App.vue'
 import infiniteScroll from 'vue-infinite-scroll'
 import VueWait from 'vue-wait'
 
+import 'vue-mazel-ui/dist/vue-mazel-ui.css'
 import './assets/scss/main.scss'
 import './utils/ArrayPrototype'
 
 import '@babel/polyfill'
+
+
+import VueMazelUi from 'vue-mazel-ui'
+Vue.use(VueMazelUi)
 
 import store from './store'
 
