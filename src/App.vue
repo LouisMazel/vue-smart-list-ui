@@ -1,17 +1,21 @@
 <template>
   <div
     id="app"
-    class="flex flex-direction-column mh-100"
+    class="flex direction-column mh-100"
   >
     <Header class="flex-fixed" />
-    <div class="content-container flex">
-      <CrmInterface class="flex-1" />
-    </div>
+    <MazFlex
+      class="content-container"
+      flex
+      flex1
+    >
+      <CrmInterface />
+    </MazFlex>
     <div
       v-if="$wait.is('app loading')"
-      class="layout-loader flex flex-direction-column align-center justify-content-center bg-color"
+      class="layout-loader flex direction-column align-center justify-center bg-color"
     >
-      <CustomLoader
+      <MazLoader
         class="mb-4"
       />
       <h3>Loading simulation</h3>
@@ -20,51 +24,49 @@
 </template>
 
 <script>
-import CrmInterface from '@/views/CrmInterface'
-import Header from '@/components/Header'
-import CustomLoader from '@/components/CustomLoader'
-import { mapGetters } from 'vuex'
+  import CrmInterface from '@/views/CrmInterface'
+  import Header from '@/components/Header'
+  import { mapGetters } from 'vuex'
 
-import cssVars from 'css-vars-ponyfill'
+  import cssVars from 'css-vars-ponyfill'
 
-import { darkTheme, lightTheme } from '@/themes'
+  import { darkTheme, lightTheme } from '@/themes'
 
-export default {
-  name: 'App',
-  components: {
-    Header,
-    CrmInterface,
-    CustomLoader
-  },
-  computed: {
-    ...mapGetters(['hasDarkTheme']),
-    cssTheme () {
-      return this.hasDarkTheme ? darkTheme : lightTheme
-    }
-  },
-  watch: {
-    hasDarkTheme () {
-      cssVars({
-        variables: this.hasDarkTheme ? darkTheme : lightTheme
-      })
-    }
-  },
-  mounted () {
-    // loading simulation page
-    this.setCssVars()
-    this.$wait.start('app loading')
-    setTimeout(() => {
-      this.$wait.end('app loading')
-    }, 1000)
-  },
-  methods: {
-    setCssVars () {
-      cssVars({
-        variables: this.hasDarkTheme ? darkTheme : lightTheme
-      })
+  export default {
+    name: 'App',
+    components: {
+      Header,
+      CrmInterface
+    },
+    computed: {
+      ...mapGetters(['hasDarkTheme']),
+      cssTheme () {
+        return this.hasDarkTheme ? darkTheme : lightTheme
+      }
+    },
+    watch: {
+      hasDarkTheme () {
+        cssVars({
+          variables: this.hasDarkTheme ? darkTheme : lightTheme
+        })
+      }
+    },
+    mounted () {
+      // loading simulation page
+      this.setCssVars()
+      this.$wait.start('app loading')
+      setTimeout(() => {
+        this.$wait.end('app loading')
+      }, 1000)
+    },
+    methods: {
+      setCssVars () {
+        cssVars({
+          variables: this.hasDarkTheme ? darkTheme : lightTheme
+        })
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

@@ -34,7 +34,7 @@ export default {
       const newData = searchQuery !== '' && searchQuery !== null
         ? await dispatch('searchingInData', { query: searchQuery, noSetData: true })
         : await dispatch('getDataClient', true)
-        
+
       commit('SET_MAX_PAGE', newData.length / itemNumberPerPage)
 
       const dataToPush = await newData.slice(
@@ -108,7 +108,7 @@ export default {
       const data = query !== '' && query !== null
         ? await mock.filter((data) => results.findIndex(r => r.entry.id === data.id) !== -1)
         : await dispatch('getDataClient', true)
-        
+
       dispatch('wait/end', 'get client data', { root: true })
 
       commit('SET_MAX_PAGE', data.length / state.itemNumberPerPage)

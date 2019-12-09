@@ -1,6 +1,6 @@
 <template>
   <span
-    class="table-lines-status flex align-center justify-content-center"
+    class="table-lines-status flex align-center justify-center"
   >
     <div :class="`label label-${colorLabel}`">
       {{ statusText }}

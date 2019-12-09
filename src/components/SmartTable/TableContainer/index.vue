@@ -1,6 +1,6 @@
 <template>
-  <div class="tracking-table flex flex-direction-column mw-100 bg-color-light">
-    <div class="tracking-table__header flex justify-content-between flex-fixed py-2 px-4 align-center bg-color">
+  <div class="tracking-table flex direction-column mw-100 bg-color-light">
+    <div class="tracking-table__header flex space-between flex-fixed py-2 px-4 align-center bg-color">
       <div class="tracking-table__title pl-2">
         <h2>Tracking Client</h2>
       </div>

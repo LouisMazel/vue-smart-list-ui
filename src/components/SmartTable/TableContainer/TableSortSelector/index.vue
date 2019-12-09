@@ -1,5 +1,5 @@
 <template>
-  <VueSelectInputUi
+  <MazSelect
     v-model="sortOptionSelected"
     class="table-sort-selector"
     label="Sorted by"
@@ -13,16 +13,10 @@
 </template>
 
 <script>
-  import VueSelectInputUi from 'vue-select-input-ui'
-  import 'vue-select-input-ui/dist/vue-select-input-ui.css'
-
   import { mapGetters } from 'vuex'
 
   export default {
     name: 'TableSortSelector',
-    components: {
-      VueSelectInputUi
-    },
     props: {
       sortOptions: { type: Array, required: true },
       value: { type: String, default: null }

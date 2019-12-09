@@ -1,12 +1,12 @@
 <template>
-  <div class="client-trancking-infos data-container flex flex-direction-column">
+  <div class="client-trancking-infos data-container flex direction-column">
     <div
       v-for="(key, i) in Object.keys(data)"
       :key="i"
     >
       <div
         v-if="key === 'interaction_creation_date' || key === 'due_date'"
-        class="flex justify-content-between mb-2"
+        class="flex space-between mb-2"
       >
         <p class="data-container__label">
           {{ getLabel(key) }}
@@ -17,9 +17,9 @@
           filter="LL"
         />
       </div>
-      <div 
+      <div
         v-else
-        class="flex justify-content-between mb-2"
+        class="flex space-between mb-2"
       >
         <p class="data-container__label">
           {{ getLabel(key) }}
@@ -46,16 +46,16 @@
     methods: {
       getLabel (key) {
         switch (key) {
-          case 'contact_channel':
-            return 'From'
-          case 'interaction_creation_date':
-            return 'Creation date'
-          case 'due_date':
-            return `Due date`
-          case 'assignedTO':
-            return 'Assigned to'
-          default:
-            return key
+        case 'contact_channel':
+          return 'From'
+        case 'interaction_creation_date':
+          return 'Creation date'
+        case 'due_date':
+          return 'Due date'
+        case 'assignedTO':
+          return 'Assigned to'
+        default:
+          return key
         }
       }
     }

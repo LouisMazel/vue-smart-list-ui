@@ -1,20 +1,22 @@
 <template>
-  <div 
-    class="client-detail-header p-2 flex justify-content-between align-center bg-color"
+  <div
+    class="client-detail-header p-2 flex space-between align-center bg-color"
   >
     <SectionTitle text="Tracking client" />
-    <button
+    <MazBtn
       class="client-detail-header__close-btn"
+      fab
+      size="mini"
       @click="$emit('close')"
     >
       ✕
-    </button>
+    </MazBtn>
   </div>
 </template>
 
 <script>
   import SectionTitle from '@/components/SectionTitle'
-  
+
   export default {
     name: 'ClientDetailHeader',
     components: {
@@ -30,13 +32,10 @@
     &__close-btn {
       background-color: var(--second-color);
       color: var(--text-color);
-      border: none;
-      cursor: pointer;
-      height: 28px;
-      width: 28px;
-      border-radius: 50%;
-      outline: none;
-      font-size: 12px;
+
+      &:hover {
+        background-color: var(--second-color);
+      }
     }
   }
 </style>

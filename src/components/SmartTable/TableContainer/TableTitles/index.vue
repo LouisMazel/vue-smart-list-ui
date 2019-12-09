@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="table-titles flex flex-fixed bg-color"
   >
     <div

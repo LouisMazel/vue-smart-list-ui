@@ -7,7 +7,8 @@ const darkThemeObject = {
   '--second-color': '#303144',
   '--light-color': '#4b4c61',
   '--text-color': '#F2F2F2',
-  '--text-muted-color': 'rgba(255, 255, 255, 0.54)'
+  '--text-muted-color': 'rgba(255, 255, 255, 0.54)',
+  '--maz-border-radius': '8px'
 }
 
 darkThemeObject['--dark-brand-color'] = ShadeColor(darkThemeObject['--brand-color'], -15)
@@ -20,7 +21,8 @@ const lightThemeObject = {
   '--second-color': '#F2F2F2',
   '--light-color': '#FFF',
   '--text-color': '#000',
-  '--text-muted-color': 'rgba(0, 0, 0, 0.54)'
+  '--text-muted-color': 'rgba(0, 0, 0, 0.54)',
+  '--maz-border-radius': '8px'
 }
 
 lightThemeObject['--dark-brand-color'] = ShadeColor(lightThemeObject['--brand-color'], -15)

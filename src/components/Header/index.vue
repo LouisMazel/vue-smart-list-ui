@@ -1,6 +1,6 @@
 <template>
   <header class="header bg-color">
-    <div class="px-4 p-2 flex align-center justify-content-between">
+    <div class="px-4 p-2 flex align-center space-between">
       <a
         href="#"
         class="flex logo"
@@ -10,7 +10,7 @@
           alt="Vue logo"
           src="@/assets/img/logo.png"
         >
-        <div class="header__title flex flex-direction-column">
+        <div class="header__title flex direction-column">
           <h1 class="fs-20">
             Smart interface
           </h1>
@@ -24,7 +24,7 @@
           <p class="fs-14 mr-2">
             Dark mode
           </p>
-          <CheckboxUI
+          <MazSwitch
             :value="hasDarkTheme"
             @input="setDarkTheme"
           />
@@ -34,7 +34,7 @@
           target="_blank"
           class="flex"
         >
-          <div class="header__title flex flex-direction-column flex-end">
+          <div class="header__title flex direction-column align-end">
             <h3>
               Made by Loïc Mazuel
             </h3>
@@ -49,14 +49,10 @@
 </template>
 
 <script>
-  import CheckboxUI from '@/components/CheckboxUI'
   import { mapGetters, mapActions } from 'vuex'
 
   export default {
     name: 'Header',
-    components: {
-      CheckboxUI
-    },
     computed: {
       ...mapGetters(['hasDarkTheme'])
     },

@@ -1,11 +1,16 @@
 <template>
-  <div class="crm-interface flex mw-100">
-    <VueSidebarUi
+  <MazFlex
+    class="crm-interface mw-100"
+    flex
+    flex1
+  >
+    <MazSidebar
       v-model="leftSidebarOpen"
+      :dark="hasDarkTheme"
       :width="280"
     >
       <FilterSidebarContent />
-    </VueSidebarUi>
+    </MazSidebar>
     <div class="flex flex-1 main">
       <TableContainer
         class="flex-1"
@@ -37,29 +42,28 @@
         <NoDataLayer v-else />
         <div
           v-if="isLastPage && getClientData.length"
-          class="flex align-center justify-content-center text-muted fs-12"
+          class="flex align-center justify-center text-muted fs-12"
         >
           All data is loaded
         </div>
       </TableContainer>
     </div>
-    <VueSidebarUi
+    <MazSidebar
       :value="!!getCurrentClientData"
       :width="350"
       right
-      without-close-btn
+      no-close-btn
+      :dark="hasDarkTheme"
     >
       <ClientDetailSidebarContent
         v-if="!!getCurrentClientData"
         @close-sidebar="resetCurrentClientData"
       />
-    </VueSidebarUi>
-  </div>
+    </MazSidebar>
+  </MazFlex>
 </template>
 
 <script>
-  import VueSidebarUi from 'vue-sidebar-ui';
-  import 'vue-sidebar-ui/dist/vue-sidebar-ui.css';
   import { TableContainer, TableLines } from '@/components/SmartTable'
   import FilterSidebarContent from '@/components/FilterSidebarContent'
   import ClientDetailSidebarContent from '@/components/ClientDetailSidebarContent'
@@ -72,7 +76,6 @@
     components: {
       TableContainer,
       TableLines,
-      VueSidebarUi,
       FilterSidebarContent,
       ClientDetailSidebarContent,
       NoDataLayer
@@ -91,7 +94,8 @@
         'getSortOptions',
         'getCurrentSort',
         'getSearchQuery',
-        'isLastPage'
+        'isLastPage',
+        'hasDarkTheme'
       ])
     },
     async mounted () {
@@ -123,6 +127,8 @@
 
 <style lang="scss" scoped>
   .crm-interface {
+    background-color: var(--second-color);
+
     .main {
       min-width: 0;
     }

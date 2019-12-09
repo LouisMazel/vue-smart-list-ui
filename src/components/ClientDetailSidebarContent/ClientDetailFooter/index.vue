@@ -1,6 +1,6 @@
 <template>
-  <div 
-    class="client-detail-footer p-2 flex justify-content-between align-center bg-color"
+  <div
+    class="client-detail-footer p-2 flex space-between align-center bg-color"
   >
     <a
       :href="`./${attachments}`"
@@ -9,14 +9,17 @@
     >
       ↓ Attachment
     </a>
-    <button class="client-detail-footer__btn btn btn-success flex-1 btn-sm">
+    <MazBtn
+      type="success"
+      class="client-detail-footer__btn flex-1"
+    >
       Call to action
-    </button>
+    </MazBtn>
   </div>
 </template>
 
 <script>
-  
+
   export default {
     name: 'ClientDetailFooter',
     props: {
@@ -28,11 +31,6 @@
 <style lang="scss" scoped>
   .client-detail-footer {
     z-index: 9;
-
-    a {
-      line-height: 36px;
-      text-decoration: none;
-    }
 
     &__btn:nth-child(2) {
       margin-left: 10px !important;

@@ -3,7 +3,7 @@
 const initialDataShown = [
   // { title: 'PJ', path: 'attachments', width: '100px' },
   { type: 'status', title: 'Status', path: 'status', width: '80px' },
-  { type: 'text', title: 'From', path: { 'customer': ['last_name', 'first_name'] }, width: '130px'},
+  { type: 'text', title: 'From', path: { customer: ['last_name', 'first_name'] }, width: '130px' },
   { type: 'social', title: 'Platform', path: 'contact_channel', width: '80px' },
   { type: 'date', title: 'Creation date', path: 'interaction_creation_date', width: '140px' },
   { type: 'date', title: 'Due date', path: 'due_date', width: '140px' },
@@ -20,8 +20,8 @@ const sortOptions = [
   { label: 'From ↑ (Z-A)', value: '-contact_channel' },
   { label: 'Creation date ↓', value: 'interaction_creation_date' },
   { label: 'Creation date ↑', value: '-interaction_creation_date' },
-  { label: `Due date ↓`, value: 'due_date' },
-  { label: `Due date ↑`, value: '-due_date' },
+  { label: 'Due date ↓', value: 'due_date' },
+  { label: 'Due date ↑', value: '-due_date' },
   { label: 'Assigned to (A-Z) ↓', value: 'assignedTO' },
   { label: 'Assigned to (A-Z) ↑', value: '-assignedTO' },
   { label: 'Status ↓ (A-Z)', value: 'status' },
@@ -39,7 +39,7 @@ export default {
   currentSort: localStorage.getItem('currentSort') || null,
   dataShown: JSON.parse(localStorage.getItem('dataShown')) || initialDataShown,
   sortOptions: sortOptions,
-  searchQuery: null,
+  searchQuery: '',
   availableStatus: ['all', 'waiting', 'reserved', 'inProgress', 'toTreat', 'finished'],
   darkThemeEnable: true
 }
