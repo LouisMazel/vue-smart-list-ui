@@ -79,9 +79,9 @@
         return Object.keys(data)
           .filter(key => !notAllowed.includes(key))
           .reduce((obj, key) => {
-            obj[key] = data[key];
-            return obj;
-          }, {});
+            obj[key] = data[key]
+            return obj
+          }, {})
       }
     },
     watch: {

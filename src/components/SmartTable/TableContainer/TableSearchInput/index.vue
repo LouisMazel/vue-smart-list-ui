@@ -36,7 +36,7 @@
     },
     methods: {
       ...mapActions(['setSearchQuery']),
-      debounceSearch(q) {
+      debounceSearch (q) {
         this.setSearchQuery(q)
         this.hasLoader = true
         clearTimeout(this.debounce)

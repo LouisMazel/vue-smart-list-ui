@@ -1,9 +1,9 @@
 import moment from 'moment'
 
-const isDate = (date) => (new Date(date) !== "Invalid Date") && !isNaN(new Date(date))
+const isDate = (date) => (new Date(date) !== 'Invalid Date') && !isNaN(new Date(date))
 
 export default (arr, searchKey) =>
-  arr.filter((obj) => 
+  arr.filter((obj) =>
     Object.keys(obj).some((key) =>
       isDate(obj[key])
         ? moment(obj[key]).format('LLL').toLowerCase().includes(searchKey.toLowerCase())

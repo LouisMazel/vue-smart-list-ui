@@ -83,7 +83,7 @@ const Score = (entryResults) => {
   let minInsertions = 0
   let minMatchIndex = []
   for (const pattern in patternsMinInsertions) {
-    if (patternsMinInsertions.hasOwnProperty(pattern)) {
+    if (patternsMinInsertions.hasOwnProperty(pattern)) { // eslint-disable-line
       minInsertions += patternsMinInsertions[pattern]
       minMatchIndex = minMatchIndex.concat(patternsMinMatchIndex[pattern])
     }
@@ -162,7 +162,7 @@ const NormalizeString = (str) => {
     const strAccentsLen = str.length
     const accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž'
     const accentsOut = 'AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz'
-    for (var y = 0; y < strAccentsLen; y++) {
+    for (let y = 0; y < strAccentsLen; y++) {
       if (accents.indexOf(strAccents[y]) !== -1) {
         strAccentsOut[y] = accentsOut.substr(accents.indexOf(strAccents[y]), 1)
       } else {

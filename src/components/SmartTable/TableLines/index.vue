@@ -19,7 +19,7 @@
         />
       </div>
       <!-- If data is a date -->
-      <DateText 
+      <DateText
         v-else-if="type === 'date'"
         :date="data[path]"
         filter="LLL"

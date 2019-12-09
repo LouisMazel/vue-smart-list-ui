@@ -24,49 +24,49 @@
 </template>
 
 <script>
-import CrmInterface from '@/views/CrmInterface'
-import Header from '@/components/Header'
-import { mapGetters } from 'vuex'
+  import CrmInterface from '@/views/CrmInterface'
+  import Header from '@/components/Header'
+  import { mapGetters } from 'vuex'
 
-import cssVars from 'css-vars-ponyfill'
+  import cssVars from 'css-vars-ponyfill'
 
-import { darkTheme, lightTheme } from '@/themes'
+  import { darkTheme, lightTheme } from '@/themes'
 
-export default {
-  name: 'App',
-  components: {
-    Header,
-    CrmInterface
-  },
-  computed: {
-    ...mapGetters(['hasDarkTheme']),
-    cssTheme () {
-      return this.hasDarkTheme ? darkTheme : lightTheme
-    }
-  },
-  watch: {
-    hasDarkTheme () {
-      cssVars({
-        variables: this.hasDarkTheme ? darkTheme : lightTheme
-      })
-    }
-  },
-  mounted () {
-    // loading simulation page
-    this.setCssVars()
-    this.$wait.start('app loading')
-    setTimeout(() => {
-      this.$wait.end('app loading')
-    }, 1000)
-  },
-  methods: {
-    setCssVars () {
-      cssVars({
-        variables: this.hasDarkTheme ? darkTheme : lightTheme
-      })
+  export default {
+    name: 'App',
+    components: {
+      Header,
+      CrmInterface
+    },
+    computed: {
+      ...mapGetters(['hasDarkTheme']),
+      cssTheme () {
+        return this.hasDarkTheme ? darkTheme : lightTheme
+      }
+    },
+    watch: {
+      hasDarkTheme () {
+        cssVars({
+          variables: this.hasDarkTheme ? darkTheme : lightTheme
+        })
+      }
+    },
+    mounted () {
+      // loading simulation page
+      this.setCssVars()
+      this.$wait.start('app loading')
+      setTimeout(() => {
+        this.$wait.end('app loading')
+      }, 1000)
+    },
+    methods: {
+      setCssVars () {
+        cssVars({
+          variables: this.hasDarkTheme ? darkTheme : lightTheme
+        })
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

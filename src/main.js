@@ -10,11 +10,10 @@ import './utils/ArrayPrototype'
 
 import '@babel/polyfill'
 
-
 import VueMazelUi from 'vue-mazel-ui'
-Vue.use(VueMazelUi)
 
 import store from './store'
+Vue.use(VueMazelUi)
 
 Vue.config.productionTip = false
 
@@ -33,5 +32,5 @@ new Vue({
   wait: new VueWait({
     useVuex: true
   }),
-  render: h => h(App),
+  render: h => h(App)
 }).$mount('#app')

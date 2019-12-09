@@ -46,16 +46,16 @@
     methods: {
       getLabel (key) {
         switch (key) {
-          case 'contact_channel':
-            return 'From'
-          case 'interaction_creation_date':
-            return 'Creation date'
-          case 'due_date':
-            return `Due date`
-          case 'assignedTO':
-            return 'Assigned to'
-          default:
-            return key
+        case 'contact_channel':
+          return 'From'
+        case 'interaction_creation_date':
+          return 'Creation date'
+        case 'due_date':
+          return 'Due date'
+        case 'assignedTO':
+          return 'Assigned to'
+        default:
+          return key
         }
       }
     }

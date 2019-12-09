@@ -46,30 +46,30 @@
     methods: {
       getLabel (key) {
         switch (key) {
-          case 'first_name':
-            return 'First name'
-          case 'last_name':
-            return 'Last name'
-          case 'email':
-            return 'E-mail'
-          case 'gender':
-            return 'Gender'
-          case 'country_code':
-            return 'Country code'
-          case 'phone':
-            return 'Phone'
-          default:
-            return key
+        case 'first_name':
+          return 'First name'
+        case 'last_name':
+          return 'Last name'
+        case 'email':
+          return 'E-mail'
+        case 'gender':
+          return 'Gender'
+        case 'country_code':
+          return 'Country code'
+        case 'phone':
+          return 'Phone'
+        default:
+          return key
         }
       },
       getGenderText (key) {
         switch (key) {
-          case 'Female':
-            return 'Female'
-          case 'Male':
-            return 'Male'
-          default:
-            return key
+        case 'Female':
+          return 'Female'
+        case 'Male':
+          return 'Male'
+        default:
+          return key
         }
       }
     }

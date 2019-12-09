@@ -39,7 +39,7 @@
     computed: {
       styleCorlor () {
         return {
-          'fill': this.color
+          fill: this.color
         }
       }
     }
