@@ -38,5 +38,6 @@
 <style lang="scss" scoped>
   .table-sort-selector {
     min-width: 200px;
+    z-index: 2 !important;
   }
 </style>
