@@ -7,7 +7,8 @@
     "build": "vue-cli-service build --dest docs --mode production",
     "lint": "npm run lint:style && vue-cli-service lint",
     "lint:style": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
-    "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix"
+    "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
+    "before-publish": "npm audit && npm run lint && npm i && npm run build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
@@ -26,7 +27,6 @@
     "@vue/cli-service": "^4.0.0",
     "@vue/eslint-config-standard": "^5.0.1",
     "babel-eslint": "^10.0.3",
-    "core-js": "^3.3.2",
     "eslint": "^5.16.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",
