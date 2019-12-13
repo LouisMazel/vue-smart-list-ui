@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
+    "serve:build": "vue-cli-service serve --mode production --open",
     "build": "vue-cli-service build --dest docs --mode production",
     "lint": "npm run lint:style && vue-cli-service lint",
     "lint:style": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
@@ -16,7 +17,7 @@
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-infinite-scroll": "^2.0.2",
-    "vue-mazel-ui": "^0.1.16",
+    "vue-mazel-ui": "^0.1.20",
     "vue-moment": "^4.0.0",
     "vue-wait": "^1.4.8",
     "vuex": "^3.1.1"

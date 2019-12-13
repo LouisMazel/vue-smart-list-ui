@@ -1,12 +1,14 @@
+import VueMazelUi from 'vue-mazel-ui'
 import Vue from 'vue'
 import App from './App.vue'
 
 import infiniteScroll from 'vue-infinite-scroll'
 import VueWait from 'vue-wait'
 import './utils/ArrayPrototype'
-import VueMazelUi from 'vue-mazel-ui'
 
+import 'vue-mazel-ui/dist/vue-mazel-ui.css'
 import './assets/scss/main.scss'
+
 import '@babel/polyfill'
 
 import store from './store'
