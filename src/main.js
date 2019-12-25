@@ -1,4 +1,4 @@
-import VueMazelUi from 'vue-mazel-ui'
+import MazUi from 'maz-ui'
 import Vue from 'vue'
 import App from './App.vue'
 
@@ -6,13 +6,13 @@ import infiniteScroll from 'vue-infinite-scroll'
 import VueWait from 'vue-wait'
 import './utils/ArrayPrototype'
 
-import 'vue-mazel-ui/dist/vue-mazel-ui.css'
+import 'maz-ui/dist/maz-ui.css'
 import './assets/scss/main.scss'
 
 import '@babel/polyfill'
 
 import store from './store'
-Vue.use(VueMazelUi)
+Vue.use(MazUi)
 
 Vue.config.productionTip = false
 
