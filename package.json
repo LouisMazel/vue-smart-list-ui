@@ -15,7 +15,7 @@
     "@babel/polyfill": "^7.7.0",
     "css-vars-ponyfill": "^2.1.2",
     "maz-ui": "^0.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "vue": "^2.6.10",
     "vue-infinite-scroll": "^2.0.2",
     "vue-moment": "^4.1.0",
